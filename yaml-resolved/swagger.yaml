@@ -1,10 +1,9 @@
 openapi: 3.0.0
 info:
-  title: Sports API
+  title: Sports store API
   version: 1.0.0
 servers:
-- url: https://virtserver.swaggerhub.com/arafathnihar/Petstore/1.0.0
-  description: SwaggerHub API Auto Mocking
+- url: /
 paths:
   /product:
     get:
@@ -20,7 +19,7 @@ paths:
                     id:
                       type: integer
                       format: int32
-                      example: 123
+                      example: 1
                     name:
                       type: string
                       example: football
