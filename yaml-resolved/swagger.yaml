@@ -72,9 +72,29 @@ paths:
                     name:
                       type: string
                       example: football
+    post:
+      description: Add a product
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/body'
+      responses:
+        200:
+          description: The product has been created
 components:
   schemas:
     inline_response_200:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: football
+    body:
       type: object
       properties:
         id:
