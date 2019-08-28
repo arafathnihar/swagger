@@ -5,6 +5,25 @@ info:
 servers:
 - url: /
 paths:
+  /product/{productId}:
+    get:
+      parameters:
+      - name: productId
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          example: 1
+      responses:
+        200:
+          description: This is a list of the products
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
   /product:
     get:
       parameters:
@@ -45,4 +64,15 @@ paths:
                     name:
                       type: string
                       example: football
-components: {}
+components:
+  schemas:
+    inline_response_200:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: football
