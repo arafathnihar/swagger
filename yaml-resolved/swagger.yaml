@@ -17,6 +17,14 @@ paths:
           type: integer
           format: int32
           example: 1
+      - name: customer-security-header
+        in: header
+        required: false
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int32
       responses:
         200:
           description: This is a list of the products
